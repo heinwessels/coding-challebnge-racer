@@ -25,9 +25,8 @@ class ShadowFax(Bot):
         # calculate the throttle
 
         target_velocity = 200
-        if target.length() > 150:
+        if target.length() > 100:
             target_velocity += 100 # speed boost!
-
 
         if velocity.length() < target_velocity:
             throttle = 1
