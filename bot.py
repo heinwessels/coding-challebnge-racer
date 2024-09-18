@@ -13,7 +13,7 @@ class ShadowFax(Bot):
 
     @property
     def contributor(self):
-        return "Hein (Speedy) Gonzales"
+        return "Hein"
 
     def compute_commands(self, next_waypoint: int, position: Transform, velocity: Vector2) -> Tuple:
         target = self.track.lines[next_waypoint]
@@ -23,7 +23,12 @@ class ShadowFax(Bot):
         angle = target.as_polar()[1]
 
         # calculate the throttle
-        target_velocity = 50
+
+        target_velocity = 200
+        if target.length() > 150:
+            target_velocity += 100 # speed boost!
+
+
         if velocity.length() < target_velocity:
             throttle = 1
         else:
