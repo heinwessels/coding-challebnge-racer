@@ -6,14 +6,14 @@ from ...bot import Bot
 from ...linear_math import Transform
 
 
-class SimpleBot(Bot):
+class ShadowFax(Bot):
     @property
     def name(self):
-        return "SimpleBot"
+        return "ShadowFax"
 
     @property
     def contributor(self):
-        return "Nobleo"
+        return "Hein (Speedy) Gonzales"
 
     def compute_commands(self, next_waypoint: int, position: Transform, velocity: Vector2) -> Tuple:
         target = self.track.lines[next_waypoint]
