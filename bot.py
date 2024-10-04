@@ -13,7 +13,7 @@ class ShadowFax(Bot):
 
     @property
     def contributor(self):
-        return "Hein"
+        return "Hein [NC]"
 
     def compute_commands(self, next_waypoint: int, position: Transform, velocity: Vector2) -> Tuple:
         target = self.track.lines[next_waypoint]
